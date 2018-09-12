@@ -1,0 +1,127 @@
+/* pages/lookup/lookup.wxss */
+
+.weui-cell__bd image{
+
+  width:60rpx;
+  height: 60rpx;
+  position: relative;
+  top: -55rpx;
+  left: 440rpx;
+  z-index: 1
+
+}
+.picture image{
+  height: 200rpx;
+  width: 100%;
+}
+.picture{
+  height: 200rpx;
+  width: 100%;
+}
+.picker{
+  /* border: 1rpx solid red; */
+  width:120rpx;
+  height: 94rpx;
+  border-radius: 20rpx;
+  line-height: 94rpx;
+  margin-left: 20rpx;
+  text-align: center;
+  color:#808090;
+  font-size: 36rpx;
+  background: white;
+  position: relative;
+  top: -15rpx;
+  left: 0;
+}
+.weui-input{
+  /* border: 1rpx solid red; */
+  width: 520rpx;
+  height: 94rpx;
+  position: relative;
+  top: 21rpx;
+  left: -20rpx;
+  border-radius: 20rpx;
+  padding-left: 20rpx;
+}
+
+.weui-flex{
+  width: 100%;
+  height: 100px;
+  background: #13227A;
+  /* background-image:; */
+  align-items: center;
+  border-bottom-left-radius:50%;
+  border-bottom-right-radius:50%; 
+  }
+.weui-input{
+  background: #ffffff
+}
+.content{
+
+  position: relative;
+  top: -85rpx;
+}
+
+/* 历史记录整体的样式 */
+.record{
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  position: relative;
+  top: -30px;
+}
+.oldRecord{
+  width: 160rpx;
+  position: relative;
+  top: 4rpx;
+}
+
+.clearRecord{
+  width: 400rpx;
+  position: relative;
+  top: -46rpx;
+  left: 480rpx;
+  font-size: 24rpx;
+}
+
+.cancel1{
+  width: 100rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 24rpx;
+  position: relative;
+  top: -5rpx;
+}
+.allEmpty{
+  width:100rpx;
+  height:50rpxx;
+  line-height: 50rpx;
+  position: relative;
+  top: -52rpx;
+  left: 120rpx;
+  font-size:24rpx;
+}
+.record1{
+  width: 400rpx;
+  height: 50rpx;
+  display: block;
+  text-align: center;
+  line-height: 50rpx;
+  position: relative;
+  top: -42rpx;
+  left: 500rpx;
+}
+.cancel{
+  position: relative;
+  top: -160rpx;
+  left: 580rpx;
+}
+.tip{
+
+  font-size: 30rpx;
+  text-align: center;
+  position: relative;
+  top: -70rpx;
+  color: white;
+  
+}

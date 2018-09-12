@@ -1,0 +1,8 @@
+5646465464
+
+
+65464658first commit new file
+
+11433@DESKTOP-IFL63OO MINGW64 /d/GitHub/myGit/weChat (master)
+$ git reflog
+0

@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/lookup/lookup",
+    "pages/Mail/Mail",
+    "pages/tool/tool",
+    "pages/Details/Details"
+   
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "13227A",
+    "navigationBarTextStyle": "#ffffff",
+    "navigationBarTitleText": "小程序",
+    "backgroundColor": "13227A",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/lookup/lookup",
+      "text": "查件",
+      "iconPath": "./resource/images/我的查件1.png",
+      "selectedIconPath": "./resource/images/我的查件2.png"
+    },
+    {
+      "pagePath": "pages/Mail/Mail",
+      "text": "寄件",
+      "iconPath": "./resource/images/寄件1.png",
+      "selectedIconPath": "./resource/images/寄件2.png"
+    },
+    {
+      "pagePath": "pages/tool/tool",
+      "text": "更多工具",
+      "iconPath": "./resource/images/更多工具1.png",
+      "selectedIconPath": "./resource/images/更多工具2.png"
+    }
+    ]
+  }
+}

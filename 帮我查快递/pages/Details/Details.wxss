@@ -1,0 +1,67 @@
+/* pages/Details/Details.wxss */
+.total{
+  height: 120rpx;
+  /* border: 1px solid red; */
+  padding-top: 20rpx;
+  margin-top: 20px;
+}
+.local1{
+  position: relative;
+  top: -65px;
+  left: 172rpx;
+  width: 520rpx;
+  height: 140rpx;
+ 
+ 
+}
+.local{
+ 
+  /* border-radius: 50%; */
+  position: relative;
+  top: -6rpx;
+  left: 14rpx;
+}
+.company{
+  height: 90rpx;
+  line-height: 90rpx;
+}
+.no{
+  height: 50rpx;
+
+}
+
+.listText{
+
+  padding-top: 10rpx;
+}
+
+.left{
+  width: 40rpx;
+  height: 40rpx;
+
+ 
+}
+.left image{
+    width: 80rpx;
+    height: 80rpx;
+    position: relative;
+    top: -16rpx;
+    left: -18rpx;
+}
+.right{
+
+  width: 480rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  position: relative;
+  top: -44rpx;
+  left: 50rpx;
+
+}
+.buttom{
+  border-left: 16rpx solid #CCCCCC;
+  position: relative;
+  top: -32rpx;
+  left: 14rpx;
+  
+}

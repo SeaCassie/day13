@@ -1,0 +1,56 @@
+<!--pages/lookup/lookup.wxml-->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class='picture'>
+  <block wx:for="{{imgUrls}}" wx:key="true">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+
+
+<view>
+<view class="weui-flex">
+    <view class="weui-flex__item">
+         <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" >
+           <view class="picker">{{array[index]}}</view>
+         </picker>
+    </view> 
+    <view class="weui-flex__item"><view class="placeholder">
+        <view class="weui-cell__bd">
+            <input class="weui-input" placeholder="请输入快递单号" bindinput='expressNoInput' bindblur='buttontap'  confirm-type="search" value='{{value}}' />
+            <image src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgEAYAAAAj6qa3AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAZiS0dEAAAAAAAA+UO7fwAAAAlwSFlzAAAASAAAAEgARslrPgAAAnpJREFUaN7tmT9oE1Ecx7+/axfBoTaBYoeWXMGhxezmWmxKAxYcqg5J6T9wqIKIYIeapMVWk3TSxaVREZpqQxfpIERoIBF7lq5VWhB7wQ5KoUkzCE7ez6V3iRZJVS4PzX2Wu/fu3eP7/R537/c4wKa2IeOkccaVD75bXKRn5CdXIIA8NESJjjoRL/MoT2Wzha7c7dljXq9Vghtfu2aCXzMZ6qd5utvdfeQbHZARZuZb0PA4mSxc1rTYjcFByUziJYXood//u8b/GQ580SP4sB0IGN315oD3WMFxyQwEEX6L86rKCvbwYHW10vxSj9RDdZpmtQ/pgpSgumRSz+gZ5NbXK40nFU5c7+zEJJ3GC0U55NPA4ZDlUIjZPLKLgzw9bbUhqzF8/OzPDFS0QNHYAYgWIJqaD6C0CjShiYfSabN9QrpK963/qluO4aOZf/SXh4aYaHE2NjaiKW2GNlwfJ5XeXtGCqkXBnWuNqOm0uQqQl7z62ZUV0cKqikpk1wHGCWc4I73y+UQLqhputIqWYGNjIx6zDnC0y2eCm2XL4CdyU2phIV/cjsfGEwnRQv8UR0PbldC9kRE08wb3DQ8b/flNbW223ecr7QZ3sUtPywqhfX2Oo6oKQhzjom38Bfv6HN+UZTipjcKHC72arwPsAEQLEE3NB1D/yysd5MGWojiG5GuhJxMTlSaiNzhJDTs7e5o2Gb2YTFol2CnLkfDzgQH24DMXW1oq3tABD28pSuUATsGHL7pu/jkxVoUUUkDlbbK+zKP6VDaLLgCwLgB9nr/pfWNj1E+po/4bpA9lDcPnGuJA2SvA5zjGY0tL5oD/jQNffAdFvlR6QN8B6jzq4y+VOosAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMDgtMTRUMTA6NDU6NTgrMDg6MDDsSNLSAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTA4LTE0VDEwOjQ1OjU4KzA4OjAwnRVqbgAAAFV0RVh0c3ZnOmJhc2UtdXJpAGZpbGU6Ly8vaG9tZS9hZG1pbi9pY29uLWZvbnQvdG1wL2ljb25fdXVyZDNoN3Q3Y2EvJUU2JTg5JUFCJUU3JUEwJTgxLnN2Z6gu4JkAAAAASUVORK5CYII=' class='images' bindtap='scanCode' />
+        </view>
+     </view>    
+  </view>
+</view> 
+    <view class="tip">小提示：搜索前请先选择正确的快递公司</view>
+</view>
+<!-- <view> <navigator url='/pages/Details/Details?company={{company}}&expressNo={{expressNo}}&index={{index}}'><button bindtap="buttontap">查询</button></navigator></view> -->
+ 
+
+<view class="record">
+    <view class='oldRecord'>历史记录</view>
+    <view wx:if='{{Recond.length>0}}'>
+    <view class='clearRecord' hidden="{{A}}" bindtap='clearRecord'> 清空记录</view>
+    <view class='record1' hidden="{{B}}">
+    <view class='cancel1' bindtap='cancel'>取消</view>
+    <view class='allEmpty' bindtap='allDelete'>全部清空</view>
+    </view>
+    </view>
+</view>
+
+<view class="weui-panel weui-panel_access  content">
+    <view class="weui-panel__bd"  wx:for="{{Recond}}" wx:key="true"  >
+        <navigator url="/pages/Details/Details?company={{company}}&expressNo={{expressNo}}&index={{item.index}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+            <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                <image class="weui-media-box__thumb" src="../../resource/images/{{item.com}}.jpg" />
+            </view>
+            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg" >
+                <view class="weui-media-box__title">{{item.company}}快递</view>
+                <view class="weui-media-box__desc">订单号：{{item.no}}</view>
+            </view>
+        </navigator> 
+        <icon type="cancel" size="23" class='cancel' hidden='{{B}}' bindtap='cancelTap' data-company="{{item.company}}" data-no="{{item.no}}" data-com="{{item.com}}" data-index="{{item.index}}"></icon>
+    </view>
+</view>
+

@@ -1,0 +1,22 @@
+<!--pages/Details/Details.wxml-->
+    <view class="weui-panel__bd total" >
+       
+            <view class="weui-media-box__hd weui-media-box__hd_in-appmsg local">
+                <image class="weui-media-box__thumb" src="../../resource/images/{{com}}.jpg" />
+            </view>
+            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg  local1">
+                <view class="weui-media-box__title company">{{company}}快递</view>
+                <view class="weui-media-box__desc  no">订单号：{{no}}</view>
+            </view>   
+    </view>
+    
+  <view  class="listText" wx:for="{{result.list}}" wx:key="true">
+  <view >
+  <view class=" left"><image src='../../resource/images/blue.png'></image></view>
+    <view class=" right">{{item.datetime}}</view>
+    </view>
+      <view  class='buttom'>{{item.remark}}</view>
+    </view>
+  
+    
+   
